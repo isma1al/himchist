@@ -174,6 +174,76 @@
     }
 }
 
+.price {
+    margin-top: 120px;
+    &__title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 28px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    &__text {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 19px;
+        line-height: 28px;
+    }
+    &__items {
+        margin-top: 100px;
+        max-width: 550px;
+        width: 100%;
+    }
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-check__block {
+        max-width: 350px;
+        width: 100%;
+        height: 500px;
+        background-color: #FAC9D6;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;   
+            color: #000000;
+            margin-bottom: 25px;
+        }
+    }
+
+    &-check__items {
+        flex: 1;
+    }
+
+    &-check__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        &-text {
+            font-weight: 600;
+        }
+    }
+
+    &-check__total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+    }
+    
+}
+
 
 
 
