@@ -1,0 +1,180 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+.header {
+    min-height: 100vh;
+    background-image: url(../images/headerBg.png);
+    background-repeat: no-repeat;
+    background-position: right 90%;
+    background-size: 800px auto;
+    &__top {
+        max-width: 1300px;
+        text-align: right;
+        padding-top: 18px;
+        position: relative;
+        padding-right: 20px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 200px;
+            background-image: url(../images/headerEllipse.svg);
+            background-repeat: no-repeat;
+            left: -10%;
+            top: -120%;
+        }
+        &-phone {
+            font-weight: 600;
+            font-size: 30px;
+            color: #000000;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url(../images/phone.svg);
+                left: -45px;
+                top: 50%;
+                width: 32px;
+                height: 32px;
+                background-repeat: no-repeat;
+                transform: translateY(-50%);
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                right: 0;
+                height: 2px;
+                bottom: 0;
+                background-color: #FFE6A1;
+                z-index: -1;
+                transition: all .3s;
+            }
+            &:hover {
+                &::before {
+                    height: 100%;
+                }
+                
+            }
+        }
+    }
+    &-block {
+        display: block;
+        text-align: left;
+        margin-top: 41px;
+        max-width: 565px;
+        margin: 40px auto 0;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 205px;
+            height: 182px;
+            background-image: url(../images/headerHome.svg);
+            left: -250px;
+            top: 0;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 84px;
+            height: 84px;
+            background-image: url(../images/money.png);
+            right: -110px;
+            top: 40%;
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 53px;
+            line-height: 65px;
+            color: #000000;
+            margin-bottom: 10px;
+            position: relative;
+            span {
+                color: #FAC9D6;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 91%;
+                left: 5px;
+                height: 15px;
+                background-color: #FAC9D6;
+                top: 30%;
+                z-index: -1;
+            }
+        }
+        &__text {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;       
+            color: #000000;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    &__menu {
+        margin-top: 90px;
+        padding-left: 50px;
+        &-list {
+            li  {
+                margin-bottom: 15px;
+                a {
+                    color: #000;
+                    font-weight: 500;
+                    font-size: 26px;
+                    line-height: 31px;
+                }
+                
+            }
+            li:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-btn {
+            margin-top: 30px;
+            position: relative;
+            display: block;
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 18px;
+            text-decoration: none;
+            background: transparent;
+            border: 1px solid #ffc815;
+            padding: 13px 35px;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 1s all ease;
+            cursor: pointer;
+            &::before {
+                background: #ffc815;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                transition: all 0.6s ease;
+                width: 100%;
+                height: 0%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:hover {
+                &::before {
+                    height: 500%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@import 'media';
