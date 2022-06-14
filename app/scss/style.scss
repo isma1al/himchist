@@ -191,20 +191,80 @@
         font-size: 19px;
         line-height: 28px;
     }
+
+    &__text {
+        margin-bottom: 100px;
+    }
     &__items {
-        margin-top: 100px;
         max-width: 550px;
         width: 100%;
     }
     &-item {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+
+        &__right-block {
+            min-width: 200px;
+        }
+
+        &__left-block{
+            margin-bottom: 70px;
+            span {
+                font-weight: 700;
+                font-size: 19px;
+               
+            }
+        }
+        &__counter {
+            display: inline-block;
+            margin-top: 20px;
+            min-width: 100px;
+            height: 40px;
+            padding: 7px;
+            border: 1px solid #E5E5E5;
+            position: relative;
+            button {
+                width: 28px;
+                height: 28px;
+                border: none;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0px 2px 5px rgba(11, 11, 15, 0.1);
+                top: 50%;
+                transform: translateY(-50%);
+                transition: background .3s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #FFD17C;
+                    box-shadow: 0px 5px 25px 2px rgba(0, 0, 0, 0.1);
+                    color: white;
+                }
+            }
+            .item-dec__btn {
+                position: absolute;
+                left: 5px;
+               
+            }
+
+            span {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            .item-inc__btn {
+                position: absolute;
+                right: 5px;
+            }
+        }
     }
     &__content {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
     &-check__block {
         max-width: 350px;
@@ -214,6 +274,24 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
+        form {
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                border: none;
+                font-size: 18px;
+                background-color: #FFD17C;
+                cursor: pointer;
+                color: #fff;
+                transition: all .3s;
+                &:hover {
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
         &-title {
             font-weight: 600;
             font-size: 17px;
@@ -225,6 +303,9 @@
 
     &-check__items {
         flex: 1;
+        overflow-y: scroll;
+        margin-bottom: 30px;
+        
     }
 
     &-check__item {
@@ -233,6 +314,7 @@
         margin-bottom: 15px;
         &-text {
             font-weight: 600;
+            font-size: 14px;
         }
     }
 
@@ -244,7 +326,71 @@
     
 }
 
+.item-name {
+    font-weight: 500;
+font-size: 19px;
+line-height: 28px;
+/* identical to box height, or 117% */
 
+display: block;
+color: #000000;
+}
 
+.phone__input {
+    display: block;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    height: 35px;
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+    padding: 7px 14px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal__alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    transition: all .3s;
+    transform: translateY(0);
+    &-content {
+        max-width: 550px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        background-color: #fff;
+        padding: 50px 60px;
+
+        h3{
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 40px;
+                    
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+                    
+            color: #161616;
+        }
+        p {
+            color: #161616;
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
+
+.modal__hidden {
+    transform: translateY(-200%)
+}
 
 @import 'media';

@@ -39,15 +39,16 @@ function images(){
     .pipe(dest('dist/images'))
 }
 
-function scripts(){
-    return src([
-        'app/js/main.js'
-    ])
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(dest('app/js'))
-    .pipe(browserSync.stream())
-}
+// function scripts(){
+//     return src([
+//         'node_modules/inputmask/dist/inputmask.min.js',
+//         'app/js/main.js'
+//     ])
+//     .pipe(concat('main.min.js'))
+//     .pipe(uglify())
+//     .pipe(dest('app/js'))
+//     .pipe(browserSync.stream())
+// }
 
 function styles(){
     return src('app/scss/style.scss')
@@ -68,7 +69,7 @@ function build(){
     return src([
         'app/css/style.min.css',
         'app/fonts/**/*',
-        'app/js/main.min.js',
+        // 'app/js/main.min.js',
         'app/*.html'
     ], {base: 'app'})
     .pipe(dest('dist'))
@@ -78,17 +79,17 @@ function build(){
 
 function watching(){
     watch(['app/scss/**/*.scss'], styles)
-    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
+    // watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
     watch(['app/*.html']).on('change', browserSync.reload)
 }
 
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
-exports.scripts = scripts;
+// exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist
 
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles,scripts,browsersync, watching);
+exports.default = parallel(styles,browsersync, watching);

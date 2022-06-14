@@ -1,4 +1,4 @@
-
+// const { default: axios } = require("axios");
 
 window.addEventListener('click', (e) =>{
 
@@ -93,3 +93,50 @@ window.addEventListener('click', (e) =>{
     }
 })
 
+
+// inputmask
+
+let inputs = document.querySelectorAll('input[type="tel"]')
+
+let im = new Inputmask('+7 (999) 999-99-99');
+
+im.mask(inputs)
+
+// Отправка формы 
+
+
+const inputPhone = document.querySelector('.phone__input');
+
+
+
+const subBtn = document.querySelector('.price-check__block form button')
+
+const obj = {
+    phone: '',
+    price: '0'
+}
+
+inputPhone.addEventListener('input', () =>{
+    if(inputPhone.value.indexOf('_', [0]) == '-1'){
+        obj.phone = inputPhone.value;
+
+    }
+})
+
+const modalAlert = document.querySelector('.modal__alert')
+
+subBtn.addEventListener('click', (e) =>{
+    e.preventDefault();
+    obj.price = document.querySelector('.price-check__total span').innerHTML;
+
+    if(obj.phone !== '' && obj.price !== '0 руб.'){
+        
+        axios.post('https://62a8d23fec36bf40bdaec29a.mockapi.io/posts', obj)
+        .then(res => res.status === 201 ? modalAlert.classList.remove('modal__hidden') : alert('Ошибка'))
+
+        
+    } else {
+        alert('Введите свой номер и выберите интересующую услугу!')
+    }
+    
+})
