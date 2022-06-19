@@ -9,12 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"  rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 <body>
     <div class="modal__alert modal__hidden">
         <div class="modal__alert-content">
             <img src="images/ok.svg" alt="ok">
-            <h3>Большое спасибо <br> УЖЕ ЗВОНИМ!</h3>
+            <h3>Большое спасибо <br> за заказ!</h3>
+            <p>Ваш заказ получен и находится в обработке. В ближайшее время с Вами свяжется менеджер..</p>
+        </div>
+    </div>
+    <div class="modal modal__hidden">
+        <div class="modal-content">
+            <img src="images/ok.svg" alt="ok">
+            <h3>УЖЕ ЗВОНИМ!</h3>
             <p>Ваше обращение получено. В ближайшее время с Вами свяжется менеджер.</p>
         </div>
     </div>
@@ -39,6 +50,43 @@
             <button class="header__menu-btn">Вызвать мастера</button>
             </div>
     </header>
+
+    <section class="working">
+        <div class="container">
+            <h2 class="working__title">
+                Как мы почистим Вашу мебель?
+            </h2>
+
+            <div class="working__inner">
+                <div class="working__inner-content">
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked1.svg" alt="working">
+                        <p>Уберем пыль</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked2.svg" alt="working">
+                        <p>Нанесем средство</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked3.svg" alt="working">
+                        <p>Удалим пятна</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked4.svg" alt="working">
+                        <p>Почистим экстакцией</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked5.svg" alt="working">
+                        <p>Промоем ткань</p>
+                    </div>
+                </div>
+                <div class="working__inner-video">
+                    <iframe width="550" height="500" src="https://www.youtube.com/embed/ZT4cxzNSi8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="price">
         <div class="container">
             <h2 class="price__title">Сколько это стоит?</h2>
@@ -206,6 +254,66 @@
         </div>
         </div>
     </section>
+    <section class="slider">
+        <div class="container">
+            <div class="slider__content">
+                <img src="images/girl.png" alt="girl">
+                <div>
+                    <h2 class="slider__title">Сомнения? Тогда вот наши фото</h2>
+            <p class="slider__text">Все фотографии сделаны мастерами в момент химчистки. Конечно же с позволения любимого клиента. </p>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+                
+        </div>
+        </section>
+
+        <section class="consultation">
+            <div class="container">
+                <h2 class="consultation__title">Хотите проконсультироваться?</h2>
+                <form action="#">
+                    <input class="consultation__input" type="tel" placeholder="+7 (000) XXX XX XX ">
+                    <button class="consultation__btn">Позвоните мне</button>
+                </form>
+                <p>Оставьте свой номер телефона, и мы сразу с вами свяжемся. Окажем профессиональную консультацию.
+                    Совершенно бесплатно, ведь за совет денег не берут.</p>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__inner-content">
+                        <h3>Cotsy.ru</h3>
+                        <p>Делаем мебель чистой</p>
+                        <span>Офис: Москва, ул. Угрешская, дом 2, стр.1</span>
+                    </div>
+                    <div class="footer__inner-contacts">
+                        <h3>Контакты</h3>
+                        <a class="footer__email" href="mailto:fb@cotsy.ru">fb@cotsy.ru</a>
+                        <a class="footer__phone" href="tel:+74950000000">+7 (495) 000 00 00</a>
+                        <a href="#" class="footer__btn">Написать руководству</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="js/main.js"></script>

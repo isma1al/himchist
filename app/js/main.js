@@ -1,4 +1,10 @@
-// const { default: axios } = require("axios");
+const swiper = new Swiper('.swiper', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    loop: true,
+});
 
 window.addEventListener('click', (e) =>{
 
@@ -80,7 +86,6 @@ window.addEventListener('click', (e) =>{
                         <span class="total__price">${total} руб.</span>
                     </div>`
 
-        
             if(cartItem){
                 cartItem.querySelector('.total__price').innerHTML = `${total} руб.`
                 cartItem.querySelector('.price-check__item-text span').innerHTML = `(${counter.innerHTML})`
@@ -88,7 +93,6 @@ window.addEventListener('click', (e) =>{
             } else {
                 cartItems.insertAdjacentHTML('beforeend', cartItemHTML)
             }
-
             calcCartPrice()
     }
 })
@@ -119,24 +123,74 @@ const obj = {
 inputPhone.addEventListener('input', () =>{
     if(inputPhone.value.indexOf('_', [0]) == '-1'){
         obj.phone = inputPhone.value;
-
     }
 })
 
 const modalAlert = document.querySelector('.modal__alert')
 
+const modalSwitch = () =>{
+    obj.phone = '';
+    modalAlert.classList.remove('modal__hidden')
+    setTimeout(() =>{
+        modalAlert.classList.add('modal__hidden')
+    }, 3000)
+}
+
 subBtn.addEventListener('click', (e) =>{
     e.preventDefault();
     obj.price = document.querySelector('.price-check__total span').innerHTML;
 
-    if(obj.phone !== '' && obj.price !== '0 руб.'){
+    
+
+    if(obj.phone !== '' && obj.price !== '0 руб.' && inputPhone.value.indexOf('_', [0]) == '-1'){
+        inputPhone.value = '';
         
         axios.post('https://62a8d23fec36bf40bdaec29a.mockapi.io/posts', obj)
-        .then(res => res.status === 201 ? modalAlert.classList.remove('modal__hidden') : alert('Ошибка'))
+        .then(res => res.status === 201 ? modalSwitch() : alert('Ошибка'))
 
         
     } else {
         alert('Введите свой номер и выберите интересующую услугу!')
     }
     
+})
+
+const consultObj = {
+    phone: '',
+}
+
+const consultInp = document.querySelector('.consultation__input');
+
+const consultBtn = document.querySelector('.consultation__btn');
+
+const modal = document.querySelector('.modal');
+
+consultInp.addEventListener('input', () =>{
+    if(consultInp.value.indexOf('_', [0]) == '-1'){
+        consultObj.phone = consultInp.value;
+    }
+})
+
+const modalContacts = () =>{
+    consultObj.phone = '';
+    modal.classList.remove('modal__hidden')
+    setTimeout(() =>{
+        modal.classList.add('modal__hidden')
+    }, 3000)
+}
+
+consultBtn.addEventListener('click', (e) =>{
+    e.preventDefault();
+
+    if(consultObj.phone !== '' && consultInp.value.indexOf('_', [0]) == '-1'){
+        consultInp.value = '';
+        
+        axios.post('https://62a8d23fec36bf40bdaec29a.mockapi.io/posts', consultObj)
+        .then(res => res.status === 201 ? modalContacts() : alert('Ошибка'))
+
+        
+    } else {
+        alert('Введите свой номер корректно')
+    }
+
 })
