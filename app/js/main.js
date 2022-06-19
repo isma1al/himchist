@@ -194,3 +194,33 @@ consultBtn.addEventListener('click', (e) =>{
     }
 
 })
+
+const burgetBtn = document.querySelector('.burger__menu');
+
+const headerMenu = document.querySelector('.header__menu--adaptiv');
+
+const closeBtn = document.querySelector('.close');
+
+burgetBtn.addEventListener('click', () =>{
+    headerMenu.classList.add('header__menu--active')
+})
+
+closeBtn.addEventListener('click', () =>{
+    headerMenu.classList.remove('header__menu--active')
+})
+
+const anchors = document.querySelectorAll('.header__menu-list__link');
+
+
+
+for(let anchor of anchors){
+    anchor.addEventListener('click', (e) =>{
+        e.preventDefault();
+        headerMenu.classList.remove('header__menu--active')
+        const blockId = anchor.getAttribute('href')
+        document.querySelector('' + blockId).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        })
+    })
+}

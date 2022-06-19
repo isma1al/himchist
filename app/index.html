@@ -30,28 +30,39 @@
         </div>
     </div>
     <header class="header">
+        <div class="header__menu--adaptiv">
+            <div class="close"><img src="images/close-burger.svg" alt=""></div> 
+            <ul class="header__menu-list ">
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#working">Этапы работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#calc">Калькулятор</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#examples">Примеры работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#consultation">Контакты</a></li>
+            </ul>
+        </div>
+       
             <div class="header__top">                
+                <div class="burger__menu"><img src="images/menu.svg" alt=""></div>
                 <a href="tel:+74951222305" class="header__top-phone">+7 495 122 23 05</a>
-           
             </div>
+  
+            
             <div class="header-block">
                 <h1 class="header-block__title">Почистим мебель
                     или <span>вернем деньги</span> </h1>
                 <p class="header-block__text">Химчистка мебели <span>от 999 руб.</span></p>
             </div>
             <div class="header__menu">
-            <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="#">Калькулятор</a></li>
-                <li class="header__menu-item"><a href="#">Этапы работ</a></li>
-                <li class="header__menu-item"><a href="#">Примеры работ</a></li>
-                <li class="header__menu-item"><a href="#">Отзывы</a></li>
-                <li class="header__menu-item"><a href="#">Контакты</a></li>
+            <ul class="header__menu-list menu--hidden">
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#working">Этапы работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#calc">Калькулятор</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#examples">Примеры работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#consultation">Контакты</a></li>
             </ul>
             <button class="header__menu-btn">Вызвать мастера</button>
             </div>
     </header>
 
-    <section class="working">
+ <section class="working" id="working">
         <div class="container">
             <h2 class="working__title">
                 Как мы почистим Вашу мебель?
@@ -87,7 +98,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="calc">
         <div class="container">
             <h2 class="price__title">Сколько это стоит?</h2>
             <p class="price__text">Сделайте расчет в удобном калькуляторе! Выберите кол-во и цена
@@ -254,7 +265,8 @@
         </div>
         </div>
     </section>
-    <section class="slider">
+   
+    <section class="slider" id="examples">
         <div class="container">
             <div class="slider__content">
                 <img src="images/girl.png" alt="girl">
@@ -285,7 +297,7 @@
         </div>
         </section>
 
-        <section class="consultation">
+        <section class="consultation" id="consultation">
             <div class="container">
                 <h2 class="consultation__title">Хотите проконсультироваться?</h2>
                 <form action="#">
@@ -296,6 +308,7 @@
                     Совершенно бесплатно, ведь за совет денег не берут.</p>
             </div>
         </section>
+     
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
@@ -312,7 +325,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer>  
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

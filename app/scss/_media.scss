@@ -1,0 +1,265 @@
+@media (max-width: 1250px){
+    .consultation::before {
+        display: none;
+    }
+}
+
+@media (max-width: 1080px){
+    .header {
+        background-size: 700px auto;
+    }
+
+    .header-block__title {
+        font-size: 42px;
+        line-height: 52px;
+    }
+}
+
+@media (max-width: 985px){
+    .header {
+        min-height: 90vh;
+        background-size: 500px;
+        background-position: center 70px;
+    }
+
+    .header-block__text {
+        text-align: center;
+    }
+
+    .burger__menu{
+        display: inline-block;
+    }
+
+    .header__top::before {
+        display: none;
+    }
+    
+    .header-block__title::before {
+        display: none;
+    }
+
+    .header-block__title {
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .header__top {
+        margin-bottom: 300px;
+    }
+
+    .header-block::before {
+        display: none;
+    }
+
+    .header-block::after {
+    right: 0;
+    }
+
+    .menu--hidden {
+        display: none;
+    }
+
+    .header__menu {
+        padding-left: 0;
+        margin-top: 50px;
+    }
+
+    .header__menu-btn {
+        margin: 0 auto;
+    }
+
+    .working {
+        &__title {
+            font-size: 34px;
+        }
+        
+        margin-top: 0;
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+            &-video {
+                margin-top: 30px;
+                iframe {
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 900px){
+    .price__content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .price__text {
+        margin-bottom: 50px;
+    }
+
+    .price-check__block {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .price__items {
+        order: 2;
+    }
+
+    .slider__content {
+        img {
+            display: none;
+        }
+    }
+
+    .slider__title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .slider__text {
+        font-size: 18px;
+    }
+
+    .slider {
+        padding-top: 50px;
+    }
+
+    .consultation {
+        margin-top: 100px;
+    }
+
+    .consultation__title {
+        font-size: 32px;
+        margin-bottom: 30px;
+        line-height: 37px;
+    }
+    .consultation form button {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 660px){
+    .footer {
+        margin-top: 100px;
+    }
+
+    .footer__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        &-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &-contacts {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .header__top-phone{
+        font-size: 20px;
+    }
+    .header {
+        background-image: url(../images/headerAdaptivBg.png);
+        background-size: auto;
+        background-position: center 100px;
+        min-height: 0vh;
+    }
+
+    .header-block__title {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .header-block__text {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .header__menu {
+        margin-top: 30px;
+    }
+    .header-block::after {
+      
+        display: none;
+    }
+
+  
+    .header__top {
+        padding-top: 25px;
+    }
+
+    
+
+    .working {
+        margin-top: 100px;
+        &__title {
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+        .working__inner-video {
+            iframe {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+
+    .price-item {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .price-item__right-block {
+        text-align: center;
+    }
+
+    .price-item__left-block {
+        margin-bottom: 15px;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .price__title{
+        font-size: 28px;
+    }
+    .price__text {
+        font-size: 17px;
+    }
+
+    .price-check__item-text {
+        font-size: 11px;
+    }
+    .total__price {
+        font-size: 10px;
+    }
+
+    .slider__title {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .slider__text {
+        font-size: 15px;
+    }
+
+    .slider__content {
+        margin-bottom: 50px;
+    }
+
+    .consultation__title {
+        font-size: 23px;
+        margin-bottom: 30px;
+        line-height: 27px;
+    }
+
+    .consultation .container p {
+        font-size: 17px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
