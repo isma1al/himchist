@@ -2,13 +2,12 @@ Landing page для химчистки. В ходе разработки исп�
 
 Используемые технологии:
 1. JavaScript,
-2. Jquery,
-3. HTML
-4. CSS
-5. SCSS
-6. GULP
-7. GIT
-8. GITHUB
-9. AXIOS
-10. MOCKAPI
-11. Swiper Slider
+2. HTML
+3. CSS
+4. SCSS
+5. GULP
+6. GIT
+7. GITHUB
+8. AXIOS
+9. MOCKAPI
+10. Swiper Slider
